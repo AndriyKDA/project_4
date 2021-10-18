@@ -3,6 +3,7 @@ import joblib
 from joblib import dump, load
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import classification_report
 
 app = Flask(__name__)
 
@@ -32,13 +33,12 @@ def index():
     #making predictions
     predictions = knn.predict(X_scaled)
     model_output = pd.DataFrame({"Prediction": predictions, "Actual": y})
+    pred_accuracy = knn.score(X_scaled, y)
+    classif_report = pd.DataFrame(classification_report(y, predictions, output_dict=True)).T
 
-    #making predictions
-    predictions = knn.predict(X_scaled)
-    model_output = pd.DataFrame({"Prediction": predictions, "Actual": y})
-    
     #returning model predictions 
-    return render_template("index.html", result=model_output)
+    return render_template("index.html", result=model_output, acc=pred_accuracy, classif_report = classif_report)
+    
 
 #result will go into html pages 
 
