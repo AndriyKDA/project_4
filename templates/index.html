@@ -15,11 +15,25 @@
       <hr>
 
 <div class="row" >
-<div class="col-sm-4">
-<h4> KNN model predictions</h4>
-<br>
-{{ result.to_html (classes="table table-striped") | safe}}
+    <div class="col-sm-12">
+        <h4> KNN model predictions</h4>
+        <br>
+<div class="row" >
+    <div class="col-sm-4">
+        <h6> Prediction Results: </h6>
+        {{ result.to_html (classes="table table-striped") | safe}}
+    </div>
+    <div class="col-sm-1">
+        
+    </div>
+    <div class="col-sm-4">
+       <h6> Classification report: </h6>
+        {{classif_report.to_html (classes="table table-striped") | safe}}
+    </div>
 
+    
+
+</div>
 </div>
 </div>
 </div>
