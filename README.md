@@ -167,6 +167,7 @@ The model generated an accuracy between 83% and 84% for Hip-Hop/Rock binary and 
 We have tried various machine learning algorithms for this project. Our aim is to get maximum accuracy. We found from our research that we can get maximum accuracy of 96% model with 2 genre classes but for the web application we decided to use the K-nearest neighbor since it was able to recognise all the genres with a good accuracy of 82%. 
 
 Link to web app : https://ak-project4.herokuapp.com/
+Presetation : https://docs.google.com/presentation/d/10A28XM4cztSf64swjDU4QkRiD4ExW76fUu_sCk6S6OM/edit#slide=id.gf99ae8e458_0_96
 
 ## Some References 
  
