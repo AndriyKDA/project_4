@@ -1,4 +1,3 @@
-### Project_4
 
 # Music-Genre-Classification
 
